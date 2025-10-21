@@ -27,6 +27,7 @@ from src.capex_model import CAPEXModel
 from src.opex_model import OPEXModel
 from src.financial_statements import FinancialStatements
 from src.analysis import FinancialAnalysis
+from src.excel_dashboard import ExcelDashboard
 
 
 def print_header(title: str):
@@ -127,12 +128,14 @@ def export_full_model():
     for variable, df in sensitivity_results.items():
         export_data[f'Sensitivity_{variable}'] = df
 
-    # Export to Excel
-    print_header("EXPORTING TO EXCEL")
+    # Export to Enhanced Excel Dashboard
+    print_header("CREATING INTERACTIVE EXCEL DASHBOARD")
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    filename = f'School_Financial_Model_{timestamp}.xlsx'
+    filename = f'School_Financial_Dashboard_{timestamp}.xlsx'
 
-    filepath = utils.export_to_excel(export_data, filename)
+    # Use enhanced dashboard
+    dashboard = ExcelDashboard(scenario='Base_Case')
+    filepath = dashboard.export(filename)
 
     # Print summary to console
     print_summary(base_case, scenario_comparison)
