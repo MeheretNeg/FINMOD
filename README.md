@@ -1,7 +1,55 @@
 # Ethiopian International Christian School - Financial Feasibility Model
 
+## 🎓 Two Ways to Use This Model
+
+### 1. 🌐 **Interactive Web App** (Recommended for Non-Technical Users)
+**User-friendly web application - No finance or coding knowledge required!**
+
+```bash
+# Launch the web app
+./launch_app.sh
+
+# Or manually:
+streamlit run app.py
+```
+
+**Features:**
+- ✅ Simple, intuitive interface
+- ✅ Real-time calculations as you adjust inputs
+- ✅ Interactive charts and visualizations
+- ✅ Research-based defaults from international standards
+- ✅ Built-in validation and warnings
+- ✅ Download Excel reports with one click
+- ✅ Perfect for stakeholder presentations
+
+**📖 Read APP_GUIDE.md for detailed instructions**
+
+### 2. 💻 **Python Scripts** (For Technical Users)
+**Full control over all parameters and calculations**
+
+```bash
+# Generate Excel dashboard
+python main.py
+```
+
+**Features:**
+- ✅ Customizable Python code
+- ✅ Edit config/assumptions.py for detailed control
+- ✅ Run individual models for testing
+- ✅ Advanced scenario analysis
+- ✅ Professional Excel output with charts
+
+---
+
 ## Project Overview
 Comprehensive financial feasibility study for an international Christian school in Addis Ababa, Ethiopia.
+
+**Based on Research & International Standards:**
+- International Baccalaureate (IB) guidelines
+- Cambridge International standards
+- Ethiopian Ministry of Education regulations
+- Addis Ababa market research (2024)
+- World Bank education statistics
 
 ### School Profile
 - **Location**: Addis Ababa, Ethiopia
